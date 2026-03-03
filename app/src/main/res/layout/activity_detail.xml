@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/detail_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="600dp"> <ImageView
+                android:id="@+id/imgPosterBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="영화 배경 포스터"
+                android:scaleType="centerCrop"
+                android:src="@drawable/movie1" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/black_gradient" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="bottom"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/txtTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="주토피아 2"
+                                android:textColor="@color/white"
+                                android:textSize="28sp"
+                                android:textStyle="bold"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:layout_marginEnd="8dp"/>
+
+                            <ImageView
+                                android:id="@+id/imgAgeLimitTitle"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:src="@drawable/ic_age_all"
+                                android:contentDescription="연령 등급"
+                                tools:src="@drawable/ic_age_all"
+                                android:scaleType="fitCenter" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/btnPlayTrailerText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            style="@style/OutlineButtonStyle"
+                            android:text="▶  예고편 재생"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:layout_marginStart="12dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+
+                        <TextView
+                            android:id="@+id/txtDetailInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="2025.11.26 개봉 | 1시간 48분 | 애니메이션"
+                            android:textColor="#AAAAAA"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp">
+
+                        <LinearLayout
+                            android:id="@+id/btnLikeContainer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:orientation="horizontal"
+                            android:background="@drawable/like_button_bg"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            android:layout_marginEnd="12dp">
+
+                            <ImageView
+                                android:id="@+id/imgLikeIcon"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/heart_icon_selector"
+                                android:layout_marginEnd="6dp"
+                                android:contentDescription="좋아요 아이콘" />
+
+                            <TextView
+                                android:id="@+id/txtLikeCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="3,874"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btnReserveDetail"
+                            style="@style/RedButtonStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="45dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="예매하기"
+                            android:textStyle="bold"
+                            android:paddingBottom="4dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="top|start"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="16dp">
+
+                    <ImageButton
+                        android:id="@+id/btnBack"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="뒤로가기"
+                        android:padding="6dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_back" />
+
+                    <ImageButton
+                        android:id="@+id/btnHome"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_home"
+                        android:contentDescription="홈으로 가기"
+                        android:scaleType="fitCenter"
+                        android:padding="6dp"/>
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@color/black">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="줄거리"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:id="@+id/txtSynopsis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="영화 줄거리가 여기에 표시됩니다. 길어질 수 있으므로 스크롤뷰 내부에 배치되어 있어 문제 없습니다. 이 영화는...."
+                    android:textColor="#CCCCCC"
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginBottom="30dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

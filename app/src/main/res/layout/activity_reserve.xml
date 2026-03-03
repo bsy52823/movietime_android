@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <View
+        android:id="@+id/topBackground"
+        android:layout_width="0dp"
+        android:layout_height="400dp"
+        android:background="@drawable/black_red_gradient"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnClose"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_close"
+        android:contentDescription="닫기"
+        android:scaleType="fitCenter"
+        android:padding="6dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtScreenTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="영화별 예매"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toTopOf="@id/btnClose"
+        app:layout_constraintBottom_toBottomOf="@id/btnClose"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/movieInfoContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="80dp">
+
+        <ImageView
+            android:id="@+id/imgReservedMoviePoster"
+            android:layout_width="155dp"
+            android:layout_height="205dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/image_rounded"
+            android:clipToOutline="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/movie1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="4dp" >
+
+            <TextView
+                android:id="@+id/txtReservedMovieTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="주토피아 2"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="8dp" />
+
+            <ImageView
+                android:id="@+id/imgReservedAgeLimit"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_age_all"
+                android:contentDescription="연령 등급" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtRuntime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="1시간 48분"
+            android:textColor="#AAAAAA"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/reservationContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_top_white_bg"
+        android:clipToOutline="true"
+        android:paddingTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/movieInfoContainer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:scrollbars="none"
+            android:layout_marginTop="16dp">
+
+            <LinearLayout
+                android:id="@+id/dateSelectorContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <include layout="@layout/date_item" android:id="@+id/date12" android:layout_width="60dp" android:layout_height="60dp" android:tag="date_item_12" tools:text="오늘\n12" android:layout_marginEnd="10dp" />
+                <include layout="@layout/date_item" android:id="@+id/date13" android:layout_width="60dp" android:layout_height="60dp" android:tag="date_item_13" tools:text="화\n13" android:layout_marginEnd="10dp" />
+                <include layout="@layout/date_item" android:id="@+id/date14" android:layout_width="60dp" android:layout_height="60dp" android:tag="date_item_14" tools:text="수\n14" android:layout_marginEnd="10dp" />
+                <include layout="@layout/date_item" android:id="@+id/date15" android:layout_width="60dp" android:layout_height="60dp" android:tag="date_item_15" tools:text="목\n15" android:layout_marginEnd="10dp" />
+                <include layout="@layout/date_item" android:id="@+id/date16" android:layout_width="60dp" android:layout_height="60dp" android:tag="date_item_16" tools:text="금\n16" android:layout_marginEnd="10dp" />
+                <include layout="@layout/date_item" android:id="@+id/date17" android:layout_width="60dp" android:layout_height="60dp" android:tag="date_item_17" tools:text="토\n17" android:layout_marginEnd="10dp" />
+                <include layout="@layout/date_item" android:id="@+id/date18" android:layout_width="60dp" android:layout_height="60dp" android:tag="date_item_18" tools:text="일\n18" android:layout_marginEnd="10dp" />
+                <include layout="@layout/date_item" android:id="@+id/date19" android:layout_width="60dp" android:layout_height="60dp" android:tag="date_item_19" tools:text="월\n19" android:layout_marginEnd="10dp" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE" android:layout_marginBottom="16dp"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"  android:layout_weight="1"  android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="16dp"> <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+                <include layout="@layout/time_box_item" android:id="@+id/timeBox1" android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginEnd="8dp"/>
+                <include layout="@layout/time_box_item" android:id="@+id/timeBox2" android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+                    <include layout="@layout/time_box_item" android:id="@+id/timeBox3" android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginEnd="8dp"/>
+                    <include layout="@layout/time_box_item" android:id="@+id/timeBox4" android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="8dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+                    <include layout="@layout/time_box_item" android:id="@+id/timeBox5" android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginEnd="8dp"/>
+                    <include layout="@layout/time_box_item" android:id="@+id/timeBox6" android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="8dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+                    <include layout="@layout/time_box_item" android:id="@+id/timeBox7" android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginEnd="8dp"/>
+
+                    <View android:layout_weight="1" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginStart="8dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

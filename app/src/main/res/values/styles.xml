@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 전체 앱 기본 테마 (필요 시 커스텀) -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- 기본 글꼴 색상 -->
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!-- ========================================================= -->
+    <!--  버튼 관련 스타일                                          -->
+    <!-- ========================================================= -->
+
+    <!-- 예매하기 버튼 스타일 -->
+    <style name="RedButtonStyle">
+        <item name="android:backgroundTint">@color/red</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+    </style>
+
+    <!-- 정렬 버튼 기본 스타일 -->
+    <style name="SortButtonStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingLeft">18dp</item>
+        <item name="android:paddingRight">18dp</item>
+        <item name="android:background">@drawable/sort_button_selector</item>
+        <item name="android:textColor">@color/sort_button_text_selector</item>
+    </style>
+
+    <!-- 하트 아이콘 버튼 공통 스타일 -->
+    <style name="IconButtonStyle">
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="OutlineButtonStyle">
+        <item name="android:background">@drawable/like_button_bg</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <!-- ========================================================= -->
+    <!--  텍스트 관련 스타일                                        -->
+    <!-- ========================================================= -->
+
+    <!-- 영화 제목 -->
+    <style name="MovieTitleText">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <!-- 영화 평점 -->
+    <style name="MovieRatingText">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+</resources>

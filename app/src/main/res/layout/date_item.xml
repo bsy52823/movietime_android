@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@drawable/date_item_selector"
+    android:padding="4dp">
+
+    <TextView
+        android:id="@+id/txtDayOfWeek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="오늘"
+        android:textSize="12sp"
+        android:textColor="@color/date_text_selector" android:textStyle="normal"/>
+
+    <TextView
+        android:id="@+id/txtDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="12"
+        android:textSize="18sp"
+        android:textColor="@color/date_text_selector" android:textStyle="bold"/>
+
+</LinearLayout>
